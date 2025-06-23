@@ -18,9 +18,9 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-from django.urls import path
+from django.urls import path,include
 from argon.apps.dashboard import views
-
+from argon.apps.tasks import views as task_views
 
 
 urlpatterns = [
@@ -28,10 +28,14 @@ urlpatterns = [
     path('',views.dashboard,name='dashboard'),
     path('tables/', views.tables, name='tables'),
     path('profile/', views.profile,name='profile'),
+    path('edit_profile/<int:profile_id>', views.edit_profile, name='edit_profile'),
+    path('delete_profile/<int:profile_id>', views.delete_profile, name='delete_profile'),
+    path('export/', views.report, name='report-general'),
+    path('exportbit/', views.reportbit, name='report-movimiento'),
     path('sign-up/', views.signup,name='signup'),
-    path('sign-in/', views.signin,name='signin')
-
+    path('sign-in/', views.signin,name='signin'),
+    path('close/',views.close,name='close'),
+    path('tareas/', task_views.tareas, name='tareas'),
 ]
-
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
