@@ -30,7 +30,7 @@ python3 -m venv config
 3. **Activa el entorno virtual:**
 ```sh
 source config/bin/activate
-# En Windows: config\Scripts\activate
+
 ```
 
 4. **Instala los paquetes necesarios:**
