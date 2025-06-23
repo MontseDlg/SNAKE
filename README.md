@@ -1,33 +1,61 @@
-Tecnologías utilizadas:
-Python, Django,Bootstrap.
+# SNAKE
 
-REQUISITOS PREVIOS 
-Antes de comenzar, asegúrate de tener lo siguiente instalado en tu sistema:
-Python 3.8+
-pip (gestor de paquetes de Python)
+### Tecnologías utilizadas:
+- Python  
+- Django  
+- Bootstrap  
 
-1. Clonar el repositorio
+---
+
+### REQUISITOS PREVIOS  
+Antes de comenzar, asegúrate de tener lo siguiente instalado en tu sistema:  
+- Python 3.8+  
+- pip (gestor de paquetes de Python)
+
+---
+
+### Pasos para ejecutar el proyecto:
+
+1. **Clona el repositorio:**
+```sh
 git clone https://github.com/MontseDlg/SNAKE.git
 cd SNAKE
+```
 
-2. Crear entorno virtual
+2. **Crea un entorno virtual:**
+```sh
 python3 -m venv config
+```
 
-3. Activar el entorno virtual
-source config/bin/acticate
+3. **Activa el entorno virtual:**
+```sh
+source config/bin/activate
+# En Windows: config\Scripts\activate
+```
 
-4. Instalar paquetes necesarios
+4. **Instala los paquetes necesarios:**
+```sh
 pip install -r requirements.txt
+```
 
-5. Crear un archivo .env con los datos de la base de datos
-DB_NAME=''
-DB_USER=''
-DB_PASSWORD=''
-DB_HOST=''
-DB_PORT=''
+5. **Crea un archivo `.env`** con los datos de tu base de datos:
+```dotenv
+DB_NAME="tu_nombre_bd"
+DB_USER="tu_usuario"
+DB_PASSWORD="tu_contraseña"
+DB_HOST="localhost"
+DB_PORT="5432"
+```
 
-6. Aplicar las migraciones
+6. **Aplica las migraciones:**
+```sh
 python manage.py migrate
+```
 
-7. Ejecutar la aplicación
+7. **Ejecuta la aplicación:**
+```sh
 python3 manage.py runserver 9001
+```
+
+---
+
