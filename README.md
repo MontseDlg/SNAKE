@@ -26,5 +26,8 @@ DB_PASSWORD=''
 DB_HOST=''
 DB_PORT=''
 
-6. Ejecutar la aplicación
+6. Aplicar las migraciones
+python manage.py migrate
+
+7. Ejecutar la aplicación
 python3 manage.py runserver 9001
